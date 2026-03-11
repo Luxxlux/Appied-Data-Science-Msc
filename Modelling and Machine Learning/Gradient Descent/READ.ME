@@ -1,0 +1,53 @@
+## Gradient Descent from Scratch
+
+This project implements a **Linear Regression** model using the **Gradient Descent** optimization algorithm in Python. It predicts sales based on advertising spend across TV, Radio, and Newspaper.
+
+---
+
+### 1. The Mathematical Foundation
+
+To find the best-fitting line, we minimize the **Mean Squared Error (MSE)**.
+
+**The Hypothesis:**
+
+
+$$\hat{Y} = b + \theta_1X_1 + \theta_2X_2 + ... + \theta_nX_n$$
+
+**The Cost Function (MSE):**
+
+
+$$J(b, \theta) = \frac{1}{m} \sum_{i=1}^{m} (\hat{y}^{(i)} - y^{(i)})^2$$
+
+---
+
+### 2. The Optimization Logic
+
+We update the parameters $b$ (bias) and $\theta$ (weights) by taking steps in the opposite direction of the gradient.
+
+**Update Equations:**
+
+
+$$b = b - \alpha \frac{2}{m} \sum (\hat{Y} - Y)$$
+
+$$\theta = \theta - \alpha \frac{2}{m} \sum (\hat{Y} - Y) \cdot X$$
+
+* **$\alpha$ (Alpha):** The learning rate (step size).
+* **$m$:** Number of data samples.
+
+---
+
+### 3. Implementation Steps
+
+1. **Initialize:** Start with random values for $b$ and $\theta$.
+2. **Predict:** Calculate $\hat{Y}$ using the current weights.
+3. **Cost:** Compute the current error (MSE).
+4. **Update:** Adjust $b$ and $\theta$ using the gradient rules.
+5. **Iterate:** Repeat until the cost stops decreasing (convergence).
+
+---
+
+### 4. Credits and Acknowledgements
+
+* **Tutorial:** [Implementing Gradient Descent in Python from Scratch](https://towardsdatascience.com/implementing-gradient-descent-in-python-from-scratch-760a8556c31f/)
+* **Use:** This project is a tutorial to practice coding gradient descent in Python.
+* **Dataset:** [Advertising Dataset from Kaggle](https://www.kaggle.com/datasets/ashydv/advertising-dataset?resource=download)
